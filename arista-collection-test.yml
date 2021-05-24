@@ -1,0 +1,9 @@
+---
+- name: test the ios facts module
+  hosts: arista-sw1
+  gather_facts: false
+  vars:
+  tasks:
+    - name: do a quick fact pull
+      arista.eos.eos_facts:
+        gather_subset: all
